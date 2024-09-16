@@ -1,0 +1,17 @@
+# Eclipse specific
+.classpath
+.project
+.settings/
+/bin/
+/target/
+
+
+# Java specific
+*.ear
+*.jar
+*.war
+bin/
+target/
+
+# VS Code specific
+.vscode/

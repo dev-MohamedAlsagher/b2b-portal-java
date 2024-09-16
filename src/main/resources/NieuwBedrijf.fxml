@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="1080.0" maxWidth="1920.0" minHeight="794.0" minWidth="1321.0" prefHeight="794.0" prefWidth="1321.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane maxHeight="1080.0" maxWidth="350.0" minHeight="795.0" minWidth="-Infinity" prefHeight="795.0" prefWidth="282.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="bedrijven" layoutX="7.0" layoutY="175.0" mnemonicParsing="false" onAction="#switchBedrijven" prefHeight="60.0" prefWidth="271.0" style="-fx-background-color: transparent; -fx-border-color: #326CFC; -fx-border-width: 0px 0px 2px 0px;" text="Bedrijven">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+            <Button fx:id="logout" layoutX="4.0" layoutY="600.0" mnemonicParsing="false" onAction="#uitloggen" prefHeight="105.0" prefWidth="272.0" style="-fx-background-color: transparent; -fx-border-color: #326CFC; -fx-border-width: 0px 0px 2px 0px;" text="Logout">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+            <FontAwesomeIconView layoutX="23.0" layoutY="215.0" size="30" text="" />
+            <FontAwesomeIconView layoutX="20.0" layoutY="663.0" size="30" text="" />
+            <Text layoutX="2.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B2B-portaal" textAlignment="CENTER" wrappingWidth="276.955078125">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="delawareLogo" fitHeight="90.0" fitWidth="283.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="goedKeuringen" layoutX="7.0" layoutY="235.0" mnemonicParsing="false" onAction="#switchGoedKeuring" prefHeight="60.0" prefWidth="271.0" style="-fx-background-color: transparent; -fx-border-color: #326CFC; -fx-border-width: 0px 0px 2px 0px;" text="Goedkeuringen">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+            <FontAwesomeIconView layoutX="19.0" layoutY="275.0" size="30" text="" />
+            <Button fx:id="voegBedrijfToeButton" layoutX="5.0" layoutY="295.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="271.0" style="-fx-background-color: transparent; -fx-border-color: #326CFC; -fx-border-width: 0px 0px 2px 0px;" text="Voeg bedrijf toe">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+            <FontAwesomeIconView layoutX="19.0" layoutY="335.0" size="30" text="+">
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+            </FontAwesomeIconView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane>
+         <children>
+            <GridPane layoutX="4.0" prefWidth="1143.0" vgap="5.0">
+               <Label style="-fx-padding: 0 0 0 20;" text="Bedrijfsnaam:" GridPane.rowIndex="2" />
+               <TextField fx:id="bedrijfsnaam" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <tooltip>
+                     <Tooltip fx:id="tltipBedrijfsnaam" text="" />
+                  </tooltip>
+               </TextField>
+               <ImageView fx:id="logo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+               <Label style="-fx-padding: 0 0 0 20;" text="Sector:" GridPane.rowIndex="4" />
+               <TextField fx:id="sector" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <tooltip>
+                     <Tooltip fx:id="tltipSector" text="" />
+                  </tooltip>
+               </TextField>
+
+               <Label style="-fx-padding: 0 0 0 20;" text="IBAN:" GridPane.rowIndex="10" />
+               <TextField fx:id="iban" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                  <tooltip>
+                     <Tooltip fx:id="tltipIBAN" text="" />
+                  </tooltip>
+               </TextField>
+
+               <Label style="-fx-padding: 0 0 0 20;" text="BTW Nummer:" GridPane.rowIndex="12" />
+               <TextField fx:id="btwNummer" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                  <tooltip>
+                     <Tooltip fx:id="tltipBTW" text="" />
+                  </tooltip>
+               </TextField>
+
+               <Label style="-fx-padding: 0 0 0 20;" text="Straat:" GridPane.rowIndex="22" />
+               <TextField fx:id="straat" GridPane.columnIndex="1" GridPane.rowIndex="22">
+                  <tooltip>
+                     <Tooltip fx:id="tltipStraat" text="" />
+                  </tooltip>
+               </TextField>
+
+               <Label style="-fx-padding: 0 0 0 20;" text="Nummer:" GridPane.rowIndex="24" />
+               <TextField fx:id="nummer" GridPane.columnIndex="1" GridPane.rowIndex="24">
+                  <tooltip>
+                     <Tooltip fx:id="tltipNummer" text="" />
+                  </tooltip>
+               </TextField>
+
+               <Label style="-fx-padding: 0 0 0 20;" text="Stad:" GridPane.rowIndex="27" />
+               <TextField fx:id="stad" GridPane.columnIndex="1" GridPane.rowIndex="27">
+                  <tooltip>
+                     <Tooltip fx:id="tltipStad" text="" />
+                  </tooltip>
+               </TextField>
+
+               <Label style="-fx-padding: 0 0 0 20;" text="Postcode:" GridPane.rowIndex="30" />
+               <TextField fx:id="postcode" GridPane.columnIndex="1" GridPane.rowIndex="30">
+                  <tooltip>
+                     <Tooltip fx:id="tltipPostcode" text="" />
+                  </tooltip>
+               </TextField>
+
+               <Label style="-fx-padding: 0 0 0 20;" text="Is Actief:" GridPane.rowIndex="14" />
+               <CheckBox fx:id="isActief" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+
+               <Label style="-fx-padding: 0 0 0 20;" text="Gebruikersnaam:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               <TextField fx:id="levgebruikersnaam" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                  <tooltip>
+                     <Tooltip fx:id="tltipLevUsername" text="" />
+                  </tooltip>
+               </TextField>
+
+               <Label style="-fx-padding: 0 0 0 20;" text="Email:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+               <TextField fx:id="levemail" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                  <tooltip>
+                     <Tooltip fx:id="tltipLevmail" text="" />
+                  </tooltip>
+               </TextField>
+
+               <Label style="-fx-padding: 0 0 0 20;" text="Wachtwoord:" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+               <PasswordField fx:id="levwachtwoord" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                  <tooltip>
+                     <Tooltip fx:id="tltipLevwachtw" text="" />
+                  </tooltip>
+               </PasswordField>
+
+               <Label style="-fx-padding: 0 0 0 20;" text="Betaalmethodes:" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+
+               <Label style="-fx-padding: 0 0 0 20;" text="Gebruikersnaam:" GridPane.columnIndex="2" GridPane.rowIndex="22" />
+               <TextField fx:id="klantgebruikersnaam" GridPane.columnIndex="3" GridPane.rowIndex="22">
+                  <tooltip>
+                     <Tooltip fx:id="tltipKlantUsername" text="" />
+                  </tooltip>
+               </TextField>
+
+               <Label style="-fx-padding: 0 0 0 20;" text="Email:" GridPane.columnIndex="2" GridPane.rowIndex="24" />
+               <TextField fx:id="klantemail" GridPane.columnIndex="3" GridPane.rowIndex="24">
+                  <tooltip>
+                     <Tooltip fx:id="tltipKlantmail" text="" />
+                  </tooltip>
+               </TextField>
+
+               <Label style="-fx-padding: 0 0 0 20;" text="Wachtwoord:" GridPane.columnIndex="2" GridPane.rowIndex="27" />
+               <PasswordField fx:id="klantwachtwoord" GridPane.columnIndex="3" GridPane.rowIndex="27">
+                  <tooltip>
+                     <Tooltip fx:id="tltipKlantWachtw" text="" />
+                  </tooltip>
+               </PasswordField>
+               <Label style="-fx-padding: 0 0 0 0;" text="gegevens als leverancier:" GridPane.columnIndex="2" />
+               <Label style="-fx-padding: 0 0 0 0;" text="gegevens als klant:" GridPane.columnIndex="2" GridPane.rowIndex="21" />
+               <Label text="Bedrijfsgegevens:" />
+               <Label style="-fx-padding: 0 0 0 20;" text="bedrijfsmail:" GridPane.rowIndex="6" />
+               <Label style="-fx-padding: 0 0 0 20;" text="telefoonnr:" GridPane.rowIndex="8" />
+               <Label text="Adresgegevens:" GridPane.rowIndex="21" />
+               <Label GridPane.rowIndex="17" />
+               <TextField fx:id="bedrmail" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                  <tooltip>
+                     <Tooltip fx:id="tltipBedrijfsmail" text="" />
+                  </tooltip>
+               </TextField>
+               <TextField fx:id="bedrtelefoonnummer" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                  <tooltip>
+                     <Tooltip fx:id="tltipTelefoonnr" text="" />
+                  </tooltip>
+               </TextField>
+               <ListView fx:id="betaalMethodesUpdate" prefHeight="0.0" prefWidth="173.0" GridPane.columnIndex="3" GridPane.rowIndex="8" GridPane.rowSpan="6" />
+               <columnConstraints>
+                  <ColumnConstraints percentWidth="16.67" />
+                  <ColumnConstraints percentWidth="16.67" />
+                  <ColumnConstraints percentWidth="16.67" />
+                  <ColumnConstraints percentWidth="16.67" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+               </rowConstraints>
+               <padding>
+                  <Insets left="100.0" top="150.0" />
+               </padding>
+            </GridPane>
+            <Text layoutX="290.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voeg bedrijf toe" textAlignment="CENTER" wrappingWidth="386.13671875">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnVoegToe" layoutX="717.0" layoutY="699.0" mnemonicParsing="false" onAction="#voegBedrijfToe" text="voeg bedrijf toe" />
+            <Label fx:id="lblErrGeneral" layoutX="717.0" layoutY="705.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
